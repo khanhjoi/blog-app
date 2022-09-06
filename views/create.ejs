@@ -30,7 +30,7 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form id="contactForm" action="/post/store" data-sb-form-api-token="API_TOKEN" method="POST">
+                            <form id="contactForm" action="/post/store" data-sb-form-api-token="API_TOKEN" method="POST" enctype="multipart/form-data">
                                 <div class="form-floating">
                                     <input class="form-control" id="title" name="title" type="text" placeholder="Enter your title here..." data-sb-validations="required" />
                                     <label for="name">titel</label>
@@ -42,6 +42,12 @@
                                     <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                 </div>
                                 <br />
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls">
+                                        <label for="">Image</label>
+                                        <input type="file" class="form-control" id="image" name="image">
+                                    </div>
+                                </div>
                                 <!-- Submit success message-->
                                 <!---->
                                 <!-- This is what your users will see when the form-->
